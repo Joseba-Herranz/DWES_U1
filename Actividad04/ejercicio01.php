@@ -5,14 +5,35 @@
  * nombre, apellido y DNI.
  * Hay que meter todos los datos en un array y después visualizarlos por pantalla en formato tabla.
  */
-$datos = array("Nombre" => "Iñigo, Juan", "Apellidos" => "Ibarretxe, Garciavaquero", "DNI" => "78945612A, 12345678B" );
+$nomb1 = 'Iñigo';
+$nomb2 = 'Juan';
+$apel1 = 'Ibarretxe';
+$apel2 = 'Garciavaquero';
+$dni1 = '78945612A';
+$dni2 = '12345678B';
+$datos = [
+            [
+                'Nombre' => $nomb1,
+                'Apellido' => $apel1,
+                'DNI' => $dni1,
+            ],
+            [
+                'Nombre' => $nomb2,
+                'Apellido' => $apel2,
+                'DNI' => $dni2,
+            ]
+          ];
 
-print_r($datos);
-
-foreach($datos as $item => $value){
-    echo $item . ": " . $value . "<br>";
-}
-
+    $s = '<table border="1">';
+    foreach ( $datos as $r ){
+        $s .= '<tr>';
+        foreach ($r as $v){
+            $s .= '<td>' . $v . '</td>';
+        }
+        $s .= '</tr>';
+    }
+    $s .= '</table>';
+    
+    echo $s;
 ?>
 
-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
