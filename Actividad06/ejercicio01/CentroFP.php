@@ -4,21 +4,42 @@
         private $cod;
         private $nombre;
         
-        public function consturctor($cod, $nombre){
+        public function __construct($cod, $nombre){
             $this->cod = $cod;
             $this->nombre = $nombre;
         }
-        public function get_cod(){
+
+        /**
+         * @return mixed
+         */
+        public function getCod()
+        {
             return $this->cod;
         }
-        public function get_nombre(){
+    
+        /**
+         * @return mixed
+         */
+        public function getNombre()
+        {
             return $this->nombre;
         }
-        public function set_nombre($nombre) {
+    
+        /**
+         * @param mixed $cod
+         */
+        public function setCod($cod)
+        {
+            $this->cod = $cod;
+        }
+    
+        /**
+         * @param mixed $nombre
+         */
+        public function setNombre($nombre)
+        {
             $this->nombre = $nombre;
         }
-        public function set_cod($cod){
-            $this->cod = $cod;   
-        }
+    
     }
 ?>
