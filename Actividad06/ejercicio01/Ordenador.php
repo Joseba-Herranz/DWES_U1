@@ -2,6 +2,7 @@
 class ordenador
 {
     private $codhz;
+    private $OS;
     private int $esSobremesa;
     
     function __construc($codhz, int $esSobremesa){
@@ -28,5 +29,7 @@ class ordenador
     {
         $this->esSobremesa = $esSobremesa;
     }
+    
+   
 }
 ?>

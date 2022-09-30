@@ -6,10 +6,14 @@
 </head>
 <body>
 	<form>
-		<input name="">
+		<input name="" type="text"> <input name="" placeholder=""> <input name="" placeholder="">
+		<input type="submit" value="Guardar">
 	</form>
 	
 	<?php
+        include 'Ordenador.php';
+        
+        $ordenador = ordenador::get;
         
     ?>
 	
