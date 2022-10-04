@@ -5,16 +5,20 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-	<form>
-		<input name="" type="text"> <input name="" placeholder=""> <input name="" placeholder="">
-		<input type="submit" value="Guardar">
-	</form>
-	
+
 	<?php
         include 'Ordenador.php';
         
-        $ordenador = ordenador::get;
+        $ordenador = new ordenador();
+        $ordenador->setCodhz('HZ01234');
+        $ordenador->setOS('Linux');
+        $ordenador->setEsSobremesa(True);
         
+        echo "Codigo: " . $ordenador->getCodhz();
+        echo "</br>";
+        echo  "Sistema operativo: " .$ordenador->getOS();
+        echo "</br>";
+        echo  "Es de sobremesa? " . $ordenador->getEsSobremesa();
     ?>
 	
 </body>

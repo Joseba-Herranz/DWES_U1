@@ -14,7 +14,12 @@ class ordenador
     {
         return $this->codhz;
     }
-
+    
+    public function getOS()
+    {
+        return $this->OS;
+    }
+    
     public function getEsSobremesa()
     {
         return $this->esSobremesa;
@@ -24,12 +29,17 @@ class ordenador
     {
         $this->codhz = $codhz;
     }
-
+    
+    public function setOS($OS)
+    {
+        $this->OS = $OS;
+    }
+    
     public function setEsSobremesa($esSobremesa)
     {
         $this->esSobremesa = $esSobremesa;
     }
-    
-   
+ 
 }
+
 ?>
