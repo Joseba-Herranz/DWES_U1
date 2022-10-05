@@ -24,10 +24,13 @@ foreach ($ordenadores as $ordenador){
     
     echo "<tr>";
     echo "<td>" . $ordenador->CodHZ . "</td>" ;
-    echo  "Sistema operativo: " . $ordenadores[4];
-    echo "</br>";
-    echo  "Es de sobremesa? " . $ordenadores[7];
+    echo "<tr>";
+    echo "<td>" . $ordenador->OS . "</td>" ;
+    echo "<tr>";
+    echo "<td>" . $ordenador->EsSobremesa . "</td>" ;
+    echo "</tr>";
 }
+
 ?>
 </table>
 </body>
