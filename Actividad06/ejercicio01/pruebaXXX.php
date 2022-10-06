@@ -13,6 +13,7 @@
 	</form>
 <?php
     include 'Ordenador.php';
+    
 ?>
 </body>
 </html>
