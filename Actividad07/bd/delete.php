@@ -10,14 +10,14 @@
 
 <?php
 if (isset($_GET['dni'])){
-    $dni = $_GET[`dni`];
+    $dni = $_GET['dni'];
     
     $mysqli = new mysqli("localhost", "root", "", "test_bd");
     if($mysqli->connect_errno){
         echo "Fallo la conexion a MySQL: (" . $mysqli->errno . ") " . $mysqli->error;
     }
     
-    if(!($sentencia = $mysqli-prepare("DELETE FROM alumno WHERE dni=?"))){
+    if(!($sentencia = $mysqli->prepare("DELETE FROM alumno WHERE dni=?"))){
         echo "Fallo la preparacion: (". $mysqli-errno .") ". $mysqli->error;
     }
     
@@ -32,7 +32,7 @@ if (isset($_GET['dni'])){
     $sentencia->close();
     
     $resultado = $mysqli->query("SELECT * FROM alumno");
-    var_dump($resultado-fetch_all());
+    var_dump($resultado->fetch_all());
 
 }else{
     echo("</br>Error en parametros</br>");
