@@ -32,7 +32,7 @@ if(isset($_GET['nombre']) && isset($_GET['dni']) && isset($_GET['email'])){
         echo "Fallo la preparacion: (". $mysqli->errno . ") ". $mysqli->error;
     }
     
-    if(!$sentencia->bind_param("sss", $nombre, $dni, $email )){
+    if(!$sentencia->bind_param("sss", $nombre, $email, $dni )){
         echo "Fallo la vinculacion de parametros: (". $mysqli->errno . ") ". $mysqli->error;
     }
     
