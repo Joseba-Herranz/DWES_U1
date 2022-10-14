@@ -5,7 +5,7 @@ require_once 'Model/Usuario.php';
 
 class M_Usuario extends Conexion{
     public function getUsers(){
-        $query = parent::con()->query('SELECT * FROM alumnos');
+        $query = parent::con()->query('SELECT * FROM usuarios');
         
         $retorno = [];
         
